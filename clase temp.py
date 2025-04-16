@@ -1,9 +1,17 @@
-"""Se ingresan temperaturas, la carga finaliza con un valor de temperatura igual a 0.
+"""Se ingresan temperaturas, para realizar la carga se consulta
+al usuario si desea ingresar temperaturas, la respuesta es
+S o N.
 Informar
 1) Temperatura maxima, y posicion respecto del ingreso
 2) Temperatura minima
 3) Porcentaje de temperaturas menores a cero.
 4) Promedio de las temperaturas positivas"""
+
+respuesta = input("¿Desea ingresar temperaturas? (S/N): ").upper()
+
+if respuesta != "S":
+    print("No se ingresaron temperaturas.")
+    exit()
 
 num = int(input("Ingrese una temperatura (0 para finalizar): "))
 
@@ -18,8 +26,6 @@ contador_negativas = 0
 
 suma_positivas = 0
 contador_positivas = 0
-
-
 
 while num != 0:
     # Actualizo el valor mas bajo en cada input
